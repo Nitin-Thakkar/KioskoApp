@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Order Kiosk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Self-Order Kiosk</h1>
+    <div id="products">
+        <div class="product">
+            <h2>Product 1</h2>
+            <p>Price: $10.00</p>
+            <button onclick="addToOrder('Product 1', 10, 'quantity1')">Add to Order</button>
+            <span id="quantity1" class="quantity-display"></span>
+        </div>
+        <div class="product">
+            <h2>Product 2</h2>
+            <p>Price: $15.00</p>
+            <button onclick="addToOrder('Product 2', 15, 'quantity2')">Add to Order</button>
+            <span id="quantity2" class="quantity-display"></span>
+        </div>
+        <div class="product">
+            <h2>Product 3</h2>
+            <p>Price: $20.00</p>
+            <button onclick="addToOrder('Product 3', 20, 'quantity3')">Add to Order</button>
+            <span id="quantity3" class="quantity-display"></span>
+        </div>
+        <div class="product">
+            <h2>Product 4</h2>
+            <p>Price: $25.00</p>
+            <button onclick="addToOrder('Product 4', 25, 'quantity4')">Add to Order</button>
+            <span id="quantity4" class="quantity-display"></span>
+        </div>
+        <div class="product">
+            <h2>Product 5</h2>
+            <p>Price: $30.00</p>
+            <button onclick="addToOrder('Product 5', 30, 'quantity5')">Add to Order</button>
+            <span id="quantity5" class="quantity-display"></span>
+        </div>
+    </div>
+    <button id="checkout" onclick="checkout()">Checkout</button>
+    <div id="receipt"></div>
+    <script src="Js/script.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to our Juice Shop!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product-card {
+            width: 200px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100px;
+        }
+
+        .product-details {
+            padding: 10px;
+        }
+
+        .product-price {
+            font-weight: bold;
+        }
+
+        .add-to-cart-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .receipt {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .receipt-header {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .receipt-item {
+            margin-bottom: 5px;
+        }
+
+        .receipt-total {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to our Juice Shop!</h1>
+    </header>
+
+    <section class="products">
+        <div class="product-card">
+            <img class="product-image" src="[image of apple juice]" alt="Apple Juice">
+            <div class="product-details">
+                <p class="product-name">Apple Juice</p>
+                <p class="product-price">$5.00</p>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img class="product-image" src="[image of apple juice]" alt="Apple Juice">
+            <div class="product-details">
+                <p class="product-name">Apple Juice</p>
+                <p class="product-price">$5.00</p>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img class="product-image" src="[image of orange juice]" alt="Orange Juice">
+            <div class="product-details">
+                <p class="product-name">Orange Juice</p>
+                <p class="product-price">$6.00</p>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+
+        </section>
+
+    <section class="receipt">
+        <h2 class="receipt-header">Receipt</h2>
+        </section>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Kiosk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to Smoothie Island!</h1>
+    <div class="smoothie-container">
+        <div class="smoothie">
+            <img src="https://www.simplyrecipes.com/thmb/5Vq-QBohlj6mVdTd59PnBirEhYc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Strawberry-Banana-Smoothie-LEAD-2-RECIRC-40ae66e586a341d7951fa38f5659fac4.jpg" alt="Strawberry Banana Smoothie" height="100" width="100">
+            <h3>Strawberry Banana</h3>
+            <p>$5.00</p>
+            <button data-id="strawberry-banana">Add to Cart</button>
+        </div>
+        <div class="smoothie">
+            <img src="images/pineapple-mango.jpg" alt="Pineapple Mango Smoothie">
+            <h3>Pineapple Mango</h3>
+            <p>$6.00</p>
+            <button data-id="pineapple-mango">Add to Cart</button>
+        </div>
+        <div class="smoothie">
+            <img src="images/tropical-green.jpg" alt="Tropical Green Smoothie">
+            <h3>Tropical Green</h3>
+            <p>$7.00</p>
+            <button data-id="tropical-green">Add to Cart</button>
+        </div>
+        <div class="smoothie">
+            <img src="images/berry-blast.jpg" alt="Berry Blast Smoothie">
+            <h3>Berry Blast</h3>
+            <p>$8.00</p>
+            <button data-id="berry-blast">Add to Cart</button>
+        </div>
+        <div class="smoothie">
+            <img src="images/chocolate-peanut.jpg" alt="Chocolate Peanut Butter Smoothie">
+            <h3>Chocolate Peanut Butter</h3>
+            <p>$9.00</p>
+            <button data-id="chocolate-peanut">Add to Cart</button>
+        </div>
+    </div>
+    <div class="cart">
+        <h2>Your Cart</h2>
+        <p id="cart-items"></p>
+        <button id="checkout">Checkout</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> -->
